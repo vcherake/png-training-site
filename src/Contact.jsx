@@ -1,11 +1,16 @@
 import React from "react";
 
+import { Box } from "grommet";
+
 function Contact() {
   return (
-    <div>
-      <h2>Contact Me</h2>
-      <h4>Okay Yeah</h4>
-    </div>
+    <Box
+      direction="row"
+      border={{ color: "accent-4", size: "large" }}
+      pad="small"
+    >
+      Contact Me
+    </Box>
   );
 }
 

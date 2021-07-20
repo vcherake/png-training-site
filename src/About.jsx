@@ -1,10 +1,16 @@
 import React from "react";
 
+import { Box } from "grommet";
+
 function About() {
   return (
-    <div>
-      <h2>About Us</h2>
-    </div>
+    <Box
+      direction="row"
+      border={{ color: "accent-4", size: "large" }}
+      pad="small"
+    >
+      About Page
+    </Box>
   );
 }
 
