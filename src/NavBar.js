@@ -23,7 +23,7 @@ function NavBar() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/contact" render={<Contact />} />
+        <Route path="/contact" component={Contact} />
       </Switch>
     </Router>
   );
