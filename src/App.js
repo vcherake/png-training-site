@@ -1,4 +1,5 @@
 import React from "react";
+import { Grommet } from "grommet";
 
 import NavBar from "./NavBar";
 // import Home from "./Home";
@@ -7,13 +8,13 @@ import NavBar from "./NavBar";
 
 function App() {
   return (
-    <>
+    <Grommet full>
       <NavBar />
 
       {/* <Home />
       <About />
       <Contact /> */}
-    </>
+    </Grommet>
   );
 }
 

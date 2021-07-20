@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Header, Button, Menu } from "grommet";
+
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -15,11 +17,12 @@ import {
 function NavBar() {
   return (
     <Router>
-      <nav>
+      <Header background="brand" gap="medium">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-      </nav>
+      </Header>
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
