@@ -1,19 +1,30 @@
 import React from "react";
-import { Grommet } from "grommet";
+import { Grommet, ResponsiveContext } from "grommet";
+import { deepMerge } from "grommet/utils";
+import { grommet } from "grommet/themes";
 
 import NavBar from "./NavBar";
-// import Home from "./Home";
-// import About from "./About";
-// import Contact from "./Contact";
+
+const theme1 = deepMerge(grommet, {
+  global: {
+    colors: {
+      brand: "green",
+      light: "light-3",
+    },
+    font: {
+      family: "Helvetica, Lato, Roboto",
+      size: "18px",
+      height: "20px",
+    },
+  },
+});
 
 function App() {
   return (
-    <Grommet full>
-      <NavBar />
-
-      {/* <Home />
-      <About />
-      <Contact /> */}
+    <Grommet theme={theme1}>
+      <ResponsiveContext.Consumer>
+        {(size) => <NavBar />}
+      </ResponsiveContext.Consumer>
     </Grommet>
   );
 }
