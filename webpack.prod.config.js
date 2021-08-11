@@ -1,22 +1,21 @@
-// webpack.config.dev.js
+// webpack.prod.config.js
 
-const webpack = require("webpack");
+const Webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { dirname } = require("path");
 
 module.exports = {
   mode: "production",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js",
-    publicPath: "",
+    // filename: "[name].[contenthash].js",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -34,5 +33,19 @@ module.exports = {
     ],
   },
   resolve: { extensions: [".js", ".jsx"] },
-  plugins: [new HtmlWebpackPlugin({ template: "public/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "public/index.html" }),
+    new Webpack.HotModuleReplacementPlugin(),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    port: 7070,
+    open: true,
+    hot: true,
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
 };
