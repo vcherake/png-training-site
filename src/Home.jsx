@@ -1,11 +1,15 @@
 import React from "react";
 
-import { Box, Text } from "grommet";
+import { Box, Text, Heading } from "grommet";
 
 function Home() {
   return (
     <Box direction="row" background="dark-3" justify="center" pad="small">
-      <Text color="dark-1">PNG Job Trainings Site</Text>
+      <Box direction="row" background="dark-3" pad="small" justify="center">
+        <Text margin="none" color="dark-1">
+          NEW UPCOMING TRAININGS
+        </Text>
+      </Box>
     </Box>
   );
 }

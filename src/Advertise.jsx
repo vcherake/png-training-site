@@ -2,12 +2,12 @@ import React from "react";
 
 import { Box } from "grommet";
 
-function Contact() {
+function Advertise() {
   return (
     <Box direction="row" justify="center" pad="small">
-      Contact Us
+      Advertise Page
     </Box>
   );
 }
 
-export default Contact;
+export default Advertise;
