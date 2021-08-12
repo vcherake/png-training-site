@@ -48,15 +48,15 @@ function NavBar() {
       <Box direction="row" justify="start" pad="large">
         <Box width="medium" direction="row">
           <Text>Search by Keyword</Text>
-          <TextInput value="" onChange="" />
+          <TextInput value="" />
         </Box>
         <Box width="medium" direction="row">
           <Text>Search by Category</Text>
-          <TextInput value="" onChange="" />
+          <TextInput value="" />
         </Box>
         <Box width="medium" direction="row">
           <Text>Search by Location</Text>
-          <TextInput value="" onChange="" />
+          <TextInput value="" />
         </Box>
       </Box>
       <Switch>
