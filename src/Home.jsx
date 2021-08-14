@@ -35,7 +35,7 @@ function Home() {
           },
         ]}
         data={[
-          { name: "Hours At Work & Casuals", percent: 20, provider: "EFPNG" },
+          { name: "Hours At Work & Casuals", provider: "EFPNG" },
           {
             name: "Hours At Work & Casuals",
             provider: "EFPNG",

@@ -17,37 +17,60 @@ import {
   Link,
 } from "react-router-dom";
 
+const linkStyle = {
+  textDecoration: "none",
+};
+
 function NavBar() {
   return (
     <Router>
       <Header
-        background="light"
-        pad={{ vertical: "small", left: "medium", right: "medium" }}
+        // pad={{ vertical: "xsmall", left: "medium", right: "medium" }}
+        pad={{ vertical: "medium" }}
         gap="large"
         direction="row"
         justify="center"
+        // height="xsmall"
+        // background="dark-3"
       >
-        <Link to="/">Home</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/signin">Sign In</Link>
-        <Link to="/advertise">Advertise</Link>
-        <Link to="/contact">Contact Us</Link>
+        <Link style={linkStyle} to="/">
+          Home
+        </Link>
+        <Link style={linkStyle} to="/register">
+          Register
+        </Link>
+        <Link style={linkStyle} to="/signin">
+          Sign In
+        </Link>
+        <Link style={linkStyle} to="/advertise">
+          Advertise
+        </Link>
+        <Link style={linkStyle} to="/contact">
+          Contact Us
+        </Link>
       </Header>
-      <Box direction="row" background="dark-3" pad="small" justify="center">
-        <Heading level="3" margin="none" color="dark-1">
-          UpSkillPNG
+      <Box direction="row" pad="medium" justify="center">
+        <Heading level="1" margin="none" color="dark-1">
+          <span style={{ color: "yellow" }}>Up</span>
+          <span style={{ color: "red" }}>Skill</span>
+          <span style={{ color: "black" }}>PNG</span>
         </Heading>
       </Box>
-      <Box direction="row" background="dark-3" pad="small" justify="center">
-        <Box justify="center" direction="row">
-          <Text level="4" margin="none" color="dark-1">
-            SEARCH FOR TRAINING
-          </Text>
-        </Box>
+      <Box direction="row" justify="center" pad="small">
+        {/* <Box justify="center" align="end" direction="column"> */}
+        <Text size="large" margin="none" color="auto">
+          SEARCH FOR TRAINING
+        </Text>
+        {/* </Box> */}
       </Box>
-      <Box direction="row" justify="start" pad="large">
+
+      <Box
+        direction="row"
+        justify="around"
+        pad={{ top: "none", bottom: "large", right: "large", left: "large" }}
+      >
         <Box width="medium" direction="row">
-          <Text>Search by Keyword</Text>
+          <Text size="medium">Search by Keyword</Text>
           <TextInput value="" />
         </Box>
         <Box width="medium" direction="row">

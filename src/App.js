@@ -10,9 +10,10 @@ const theme1 = deepMerge(grommet, {
     colors: {
       brand: "green",
       light: "light-3",
+      auto: "black",
     },
     font: {
-      family: "Helvetica, Lato, Roboto",
+      family: "Arial, Helvetica, Lato, Roboto",
       size: "18px",
       height: "20px",
     },
