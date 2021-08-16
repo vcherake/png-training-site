@@ -18,6 +18,21 @@ const theme1 = deepMerge(grommet, {
       height: "20px",
     },
   },
+  dataTable: {
+    header: {
+      gap: "small",
+      units: {
+        color: "text-xweak",
+        margin: { left: "large" },
+      },
+      background: "#EE0C0C",
+      border: {
+        color: "blue",
+        side: "bottom",
+      },
+      round: true,
+    },
+  },
 });
 
 function App() {

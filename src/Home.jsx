@@ -1,57 +1,97 @@
 import React from "react";
 
-import { Box, Text, DataTable } from "grommet";
+import { Grommet, Box, Text, DataTable } from "grommet";
+
+import { grommet } from "grommet/themes";
+
+// const tableTheme = {
+//   dataTable: {
+//     header: {
+//       gap: "small",
+//       units: {
+//         color: "text-xweak",
+//         margin: { left: "large" },
+//       },
+//       background: "#EE0C0C",
+//       border: {
+//         color: "blue",
+//         side: "bottom",
+//       },
+//       round: true,
+//     },
+//   },
+// };
+
+// {
+/* <Box direction="row" justify="center" pad="small">
+// {/* <Box justify="center" align="end" direction="column"> */
+// }
+// <Text size="large" margin="none" color="auto">
+//   SEARCH FOR TRAINING
+// </Text>
+// {/* </Box> */}
+// </Box> */}
 
 function Home() {
   return (
-    <Box direction="column" background="dark-3" justify="center" pad="small">
-      <Box direction="row" background="dark-3" justify="center">
-        <Text margin="none" color="dark-1">
+    // <Grommet theme={tableTheme}>
+    <Box direction="column" justify="center" pad="small">
+      <Box direction="row" justify="center" pad="small">
+        <Text size="large" margin="none" color="black">
           NEW UPCOMING TRAININGS
         </Text>
       </Box>
-      {/* <Box> */}
-      <DataTable
-        columns={[
-          {
-            property: "name",
-            header: <Text>Name of Training</Text>,
-            primary: true,
-          },
-          {
-            property: "provider",
-            header: <Text>Name of Provider</Text>,
-            primary: true,
-          },
-          {
-            property: "date",
-            header: <Text>Date of Training</Text>,
-            primary: true,
-          },
-          {
-            property: "details",
-            header: <Text>Details of Training</Text>,
-            primary: true,
-          },
-        ]}
-        data={[
-          { name: "Hours At Work & Casuals", provider: "EFPNG" },
-          {
-            name: "Hours At Work & Casuals",
-            provider: "EFPNG",
-            date: "19th August 2021",
-            details: "Read more...",
-          },
-          {
-            name: "Hours At Work & Casuals",
-            provider: "EFPNG",
-            date: "19th August 2021",
-            details: "Read more...",
-          },
-        ]}
-      />
-      {/* </Box> */}
+      <Box direction="row" justify="evenly">
+        <DataTable
+          pad={{ header: "medium" }}
+          background={{
+            // header: "#EE0C0C",
+
+            body: ["white", "pink"],
+            footer: { dark: "light-2", light: "dark-3" },
+          }}
+          size="large"
+          columns={[
+            {
+              property: "name",
+              header: <Text color="black">Name of Training</Text>,
+              primary: true,
+            },
+            {
+              property: "provider",
+              header: <Text color="black">Name of Provider</Text>,
+              primary: true,
+            },
+            {
+              property: "date",
+              header: <Text color="black">Date of Training</Text>,
+              primary: true,
+            },
+            {
+              property: "details",
+              header: <Text color="black">Details of Training</Text>,
+              primary: true,
+            },
+          ]}
+          data={[
+            { name: "Hours At Work & Casuals", provider: "EFPNG" },
+            {
+              name: "Hours At Work & Casuals",
+              provider: "EFPNG",
+              date: "19th August 2021",
+              details: "Read more...",
+            },
+            {
+              name: "Hours At Work & Casuals",
+              provider: "EFPNG",
+              date: "19th August 2021",
+              details: "Read more...",
+            },
+          ]}
+        />
+      </Box>
     </Box>
+    // {/* </Grommet> */}
   );
 }
 

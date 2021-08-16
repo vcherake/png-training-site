@@ -50,10 +50,10 @@ function NavBar() {
         </Link>
       </Header>
       <Box direction="row" pad="medium" justify="center">
-        <Heading level="1" margin="none" color="dark-1">
-          <span style={{ color: "yellow" }}>Up</span>
-          <span style={{ color: "red" }}>Skill</span>
-          <span style={{ color: "black" }}>PNG</span>
+        <Heading level="1" margin="none">
+          <span style={{ color: "#FFE600" }}>Up</span>
+          <span style={{ color: "#FF0000" }}>Skill</span>
+          <span style={{ color: "#000000" }}>PNG</span>
         </Heading>
       </Box>
       <Box direction="row" justify="center" pad="small">
@@ -66,19 +66,23 @@ function NavBar() {
 
       <Box
         direction="row"
-        justify="around"
-        pad={{ top: "none", bottom: "large", right: "large", left: "large" }}
+        justify="evenly"
+        pad={{ top: "small", bottom: "small", right: "large", left: "large" }}
+        margin={{ bottom: "medium" }}
+        background="#EEA10C"
+        border
+        round
       >
-        <Box width="medium" direction="row">
-          <Text size="medium">Search by Keyword</Text>
+        <Box direction="row">
+          <Text color="auto">Search by Keyword</Text>
+          <TextInput value="" background="white" />
+        </Box>
+        <Box direction="row">
+          <Text color="auto">Search by Category</Text>
           <TextInput value="" />
         </Box>
-        <Box width="medium" direction="row">
-          <Text>Search by Category</Text>
-          <TextInput value="" />
-        </Box>
-        <Box width="medium" direction="row">
-          <Text>Search by Location</Text>
+        <Box direction="row">
+          <Text color="auto">Search by Location</Text>
           <TextInput value="" />
         </Box>
       </Box>
@@ -90,7 +94,7 @@ function NavBar() {
         <Route path="/contact" component={Contact} />
       </Switch>
       <Footer background="light-4" justify="center" pad="small">
-        <Text textAlign="center" color="dark-1">
+        <Text textAlign="center" color="auto">
           UpSkillPNG &copy; 2021
         </Text>
       </Footer>
