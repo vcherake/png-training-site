@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Grommet, Box, Text, DataTable } from "grommet";
 
 import { grommet } from "grommet/themes";
+
+const trainingDetails = [
+  {
+    name: "Hours At Work & Casuals",
+    provider: "EFPNG",
+    date: "5th August 2021",
+    details: "Read more...",
+  },
+  {
+    name: "Hours At Work & Casuals",
+    provider: "EFPNG",
+    date: "19th August 2021",
+    details: "Read more...",
+  },
+  {
+    name: "Hours At Work & Casuals",
+    provider: "EFPNG",
+    date: "25th August 2021",
+    details: "Read more...",
+  },
+];
 
 // const tableTheme = {
 //   dataTable: {
@@ -33,6 +54,8 @@ import { grommet } from "grommet/themes";
 // </Box> */}
 
 function Home() {
+  const [trainingTimes, setTrainingTimes] = useState(trainingDetails);
+
   return (
     // <Grommet theme={tableTheme}>
     <Box direction="column" justify="center" pad="small">
@@ -73,21 +96,7 @@ function Home() {
               primary: true,
             },
           ]}
-          data={[
-            { name: "Hours At Work & Casuals", provider: "EFPNG" },
-            {
-              name: "Hours At Work & Casuals",
-              provider: "EFPNG",
-              date: "19th August 2021",
-              details: "Read more...",
-            },
-            {
-              name: "Hours At Work & Casuals",
-              provider: "EFPNG",
-              date: "19th August 2021",
-              details: "Read more...",
-            },
-          ]}
+          data={trainingTimes}
         />
       </Box>
     </Box>
